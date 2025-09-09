@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl0ppxua6y4b1"]
+
+[ext_resource type="PackedScene" uid="uid://da6ycmw1bshin" path="res://character.tscn" id="1_fy4ne"]
+[ext_resource type="PackedScene" uid="uid://cicvfpmq5ime2" path="res://items/item.tscn" id="2_xsss1"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Character" parent="." instance=ExtResource("1_fy4ne")]
+position = Vector2(94, 74)
+
+[node name="Item" parent="." instance=ExtResource("2_xsss1")]
+
+[node name="Item2" parent="." instance=ExtResource("2_xsss1")]
+position = Vector2(138, 8)
+
+[node name="Item3" parent="." instance=ExtResource("2_xsss1")]
+position = Vector2(122, 63)

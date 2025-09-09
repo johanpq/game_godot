@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://drrcxl6nb0b1n" path="res://character/assets/player.png" id="2_wa5vi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f50pn"]
-size = Vector2(20, 6)
+size = Vector2(14, 19)
 
 [sub_resource type="Animation" id="Animation_wa5vi"]
 length = 0.001
@@ -437,6 +437,7 @@ states/walk/node = SubResource("AnimationNodeBlendSpace2D_jb3kq")
 states/walk/position = Vector2(392.444, 186)
 
 [node name="Character" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_pjt0s")
 
 [node name="Texture" type="Sprite2D" parent="."]
@@ -446,7 +447,7 @@ hframes = 6
 vframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 3)
+position = Vector2(1, -9.5)
 shape = SubResource("RectangleShape2D_f50pn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
