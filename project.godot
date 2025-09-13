@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="game"
+run/main_scene="uid://sehu004fn2s5"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
 [autoload]
