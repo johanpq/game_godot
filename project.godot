@@ -14,6 +14,10 @@ config/name="game"
 run/main_scene="uid://sehu004fn2s5"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
+[autoload]
+
+GlobalVariables="*res://globalVariables.gd"
+
 [display]
 
 window/size/viewport_width=320

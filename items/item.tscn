@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cicvfpmq5ime2"]
+[gd_scene load_steps=5 format=3 uid="uid://cicvfpmq5ime2"]
 
 [ext_resource type="Script" uid="uid://bvolp5rut4seb" path="res://items/script/item.gd" id="1_buahv"]
 [ext_resource type="Texture2D" uid="uid://73v5jasxpxof" path="res://terrain/assets/interior/grass.png" id="1_pxpuq"]
+[ext_resource type="PackedScene" uid="uid://5ypvcel7aw54" path="res://KeyboardLabel/Label_keyboard.tscn" id="3_k7rtb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_buahv"]
 size = Vector2(30, 23)
@@ -21,13 +22,8 @@ collision_layer = 2
 position = Vector2(49, 31.5)
 shape = SubResource("RectangleShape2D_buahv")
 
-[node name="Label" type="Label" parent="Area2D"]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-text = "F"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="LabelKeyboard" parent="Area2D" instance=ExtResource("3_k7rtb")]
+position = Vector2(34, 17)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
