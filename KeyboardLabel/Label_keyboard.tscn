@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://5ypvcel7aw54"]
+
+[ext_resource type="Script" uid="uid://dm62ecnojwmli" path="res://KeyboardLabel/scripts/label.gd" id="1_s7iiv"]
+
+[node name="LabelKeyboard" type="Node2D" node_paths=PackedStringArray("label_keyboard")]
+script = ExtResource("1_s7iiv")
+label_keyboard = NodePath("Label")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 5
+text = "default"

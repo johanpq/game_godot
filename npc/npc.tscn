@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=3 uid="uid://k00yvrjm63ux"]
+
+[ext_resource type="Script" uid="uid://d28bxv4mt727f" path="res://npc/script/npc_base.gd" id="1_66myh"]
+[ext_resource type="Texture2D" uid="uid://drrcxl6nb0b1n" path="res://character/assets/player.png" id="1_uh8jx"]
+[ext_resource type="Script" uid="uid://dfeplyknbkavv" path="res://npc/script/npc_1.gd" id="2_3i1kj"]
+[ext_resource type="PackedScene" uid="uid://5ypvcel7aw54" path="res://KeyboardLabel/Label_keyboard.tscn" id="4_ldo70"]
+[ext_resource type="Script" uid="uid://bkgflp00eymwt" path="res://npc/script/npc_2.gd" id="4_o6cys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66myh"]
+
+[node name="NPC" type="Node2D" node_paths=PackedStringArray("labelKeyboard", "mural_npc1", "mural_npc2", "painel_label_warning", "label_warning_title", "label_warning_text")]
+script = ExtResource("1_66myh")
+labelKeyboard = NodePath("LabelKeyboard")
+mural_npc1 = NodePath("NPC1/Area2D/CanvasLayer/PanelContainer")
+mural_npc2 = NodePath("NPC2/Area2D/CanvasLayer/PanelContainer")
+painel_label_warning = NodePath("Warning/CanvasLayer/PanelContainer")
+label_warning_title = NodePath("Warning/CanvasLayer/PanelContainer/RichTextLabel")
+label_warning_text = NodePath("Warning/CanvasLayer/PanelContainer/RichTextLabel2")
+
+[node name="LabelKeyboard" parent="." instance=ExtResource("4_ldo70")]
+visible = false
+
+[node name="NPC1" type="Node2D" parent="." node_paths=PackedStringArray("labelKeyboard", "mural_npc1", "mural_npc2", "painel_label_warning", "label_warning_title", "label_warning_text")]
+script = ExtResource("2_3i1kj")
+labelKeyboard = NodePath("Area2D/LabelKeyboard")
+mural_npc1 = NodePath("Area2D/CanvasLayer/PanelContainer")
+mural_npc2 = NodePath("../NPC2/Area2D/CanvasLayer/PanelContainer")
+painel_label_warning = NodePath("../Warning/CanvasLayer/PanelContainer")
+label_warning_title = NodePath("../Warning/CanvasLayer/PanelContainer/RichTextLabel")
+label_warning_text = NodePath("../Warning/CanvasLayer/PanelContainer/RichTextLabel2")
+
+[node name="Area2D" type="Area2D" parent="NPC1"]
+
+[node name="GetItemsNpc" type="Sprite2D" parent="NPC1/Area2D"]
+position = Vector2(237, 32)
+texture = ExtResource("1_uh8jx")
+hframes = 6
+vframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC1/Area2D"]
+position = Vector2(237, 39)
+shape = SubResource("RectangleShape2D_66myh")
+
+[node name="LabelKeyboard" parent="NPC1/Area2D" instance=ExtResource("4_ldo70")]
+visible = false
+position = Vector2(225, 25)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="NPC1/Area2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="NPC1/Area2D/CanvasLayer"]
+visible = false
+offset_right = 77.0
+offset_bottom = 43.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NPC1/Area2D/CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 9
+text = "Quest"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="NPC1/Area2D/CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 6
+text = "Apanhe o lixo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NPC2" type="Node2D" parent="." node_paths=PackedStringArray("labelKeyboard", "mural_npc1", "mural_npc2", "painel_label_warning", "label_warning_title", "label_warning_text")]
+position = Vector2(-86, 65)
+script = ExtResource("4_o6cys")
+labelKeyboard = NodePath("Area2D/LabelKeyboard")
+mural_npc1 = NodePath("../NPC1/Area2D/CanvasLayer/PanelContainer")
+mural_npc2 = NodePath("Area2D/CanvasLayer/PanelContainer")
+painel_label_warning = NodePath("../Warning/CanvasLayer/PanelContainer")
+label_warning_title = NodePath("../Warning/CanvasLayer/PanelContainer/RichTextLabel")
+label_warning_text = NodePath("../Warning/CanvasLayer/PanelContainer/RichTextLabel2")
+
+[node name="Area2D" type="Area2D" parent="NPC2"]
+
+[node name="GetItemsNpc" type="Sprite2D" parent="NPC2/Area2D"]
+position = Vector2(237, 32)
+texture = ExtResource("1_uh8jx")
+hframes = 6
+vframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2/Area2D"]
+position = Vector2(237, 39)
+shape = SubResource("RectangleShape2D_66myh")
+
+[node name="LabelKeyboard" parent="NPC2/Area2D" instance=ExtResource("4_ldo70")]
+visible = false
+position = Vector2(224, 23)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="NPC2/Area2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="NPC2/Area2D/CanvasLayer"]
+visible = false
+offset_right = 77.0
+offset_bottom = 43.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NPC2/Area2D/CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 9
+text = "Quest"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="NPC2/Area2D/CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 6
+text = "teste"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Warning" type="Node2D" parent="."]
+position = Vector2(-86, 65)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Warning"]
+
+[node name="PanelContainer" type="PanelContainer" parent="Warning/CanvasLayer"]
+visible = false
+offset_right = 77.0
+offset_bottom = 43.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Warning/CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 9
+text = "Quest"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Warning/CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 6
+text = "teste"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="NPC1/Area2D" to="NPC1" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="NPC1/Area2D" to="NPC1" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="NPC2/Area2D" to="NPC2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="NPC2/Area2D" to="NPC2" method="_on_area_2d_body_exited"]
