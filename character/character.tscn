@@ -442,6 +442,7 @@ script = ExtResource("1_pjt0s")
 
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(0.5, -17)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_wa5vi")
 hframes = 6
 vframes = 10
@@ -460,3 +461,6 @@ tree_root = SubResource("AnimationNodeStateMachine_yxww1")
 anim_player = NodePath("../AnimationPlayer")
 parameters/idle/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.6, 1.6)

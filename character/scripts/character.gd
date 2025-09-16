@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name PlayerCharacter  # nome da classe
 
 @export_category("Variables")
-@export var move_speed: float = 64.0
+@export var move_speed: float = 40.0
 @export var friction: float = 0.2
 @export var acceleration: float = 0.2
 
