@@ -12,14 +12,16 @@ script = ExtResource("1_14md5")
 [node name="TileMapLayer" parent="." instance=ExtResource("4_14md5")]
 
 [node name="Quests" parent="." instance=ExtResource("3_xsss1")]
+position = Vector2(60, -16)
 
 [node name="Character" parent="." instance=ExtResource("1_fy4ne")]
-position = Vector2(125, 102)
+position = Vector2(71, 117)
 
 [node name="Item" parent="." instance=ExtResource("2_xsss1")]
+position = Vector2(191, -1)
 
 [node name="Item2" parent="." instance=ExtResource("2_xsss1")]
-position = Vector2(138, 8)
+position = Vector2(115, -2)
 
 [node name="Item3" parent="." instance=ExtResource("2_xsss1")]
-position = Vector2(122, 63)
+position = Vector2(232, 77)
