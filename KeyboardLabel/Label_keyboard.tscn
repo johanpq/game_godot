@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dm62ecnojwmli" path="res://KeyboardLabel/scripts/label.gd" id="1_s7iiv"]
 
 [node name="LabelKeyboard" type="Node2D" node_paths=PackedStringArray("label_keyboard")]
+visible = false
 script = ExtResource("1_s7iiv")
 label_keyboard = NodePath("Label")
 
