@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cicvfpmq5ime2"]
+
+[ext_resource type="Script" uid="uid://bvolp5rut4seb" path="res://items/script/items.gd" id="1_buahv"]
+[ext_resource type="Texture2D" uid="uid://73v5jasxpxof" path="res://terrain/assets/interior/grass.png" id="1_pxpuq"]
+[ext_resource type="Script" uid="uid://33qix4lv4bth" path="res://items/script/item.gd" id="2_fae3u"]
+[ext_resource type="PackedScene" uid="uid://5ypvcel7aw54" path="res://KeyboardLabel/Label_keyboard.tscn" id="3_k7rtb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_buahv"]
+size = Vector2(30, 23)
+
+[node name="Items" type="Node2D"]
+script = ExtResource("1_buahv")
+
+[node name="item" type="Node2D" parent="."]
+position = Vector2(-18, 25)
+script = ExtResource("2_fae3u")
+
+[node name="TrashTexture" type="Sprite2D" parent="item"]
+position = Vector2(49, 32)
+texture = ExtResource("1_pxpuq")
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="item"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="item/Area2D"]
+position = Vector2(49, 31.5)
+shape = SubResource("RectangleShape2D_buahv")
+
+[node name="LabelKeyboard" parent="item/Area2D" instance=ExtResource("3_k7rtb")]
+visible = true
+position = Vector2(34, 17)
+
+[connection signal="body_entered" from="item/Area2D" to="." method="in_area"]
+[connection signal="body_exited" from="item/Area2D" to="." method="out_area"]
