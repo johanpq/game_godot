@@ -1,10 +1,112 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl0ppxua6y4b1"]
+[gd_scene load_steps=22 format=3 uid="uid://cl0ppxua6y4b1"]
 
 [ext_resource type="Script" uid="uid://bdfnj0ntsql3f" path="res://Scenario1/scripts/level_1.gd" id="1_14md5"]
 [ext_resource type="PackedScene" uid="uid://cicvfpmq5ime2" path="res://items/items.tscn" id="2_xsss1"]
 [ext_resource type="PackedScene" uid="uid://k00yvrjm63ux" path="res://npc/npc.tscn" id="3_xsss1"]
 [ext_resource type="PackedScene" uid="uid://sehu004fn2s5" path="res://ItemTitleMap/titlemapLevel1.tscn" id="4_14md5"]
-[ext_resource type="PackedScene" path="res://character/character.tscn" id="5_5t6ri"]
+[ext_resource type="PackedScene" uid="uid://da6ycmw1bshin" path="res://character/character.tscn" id="5_5t6ri"]
+[ext_resource type="Texture2D" uid="uid://drrcxl6nb0b1n" path="res://character/assets/player.png" id="5_jibqm"]
+[ext_resource type="Texture2D" uid="uid://b0hir8k668rpt" path="res://Warrior_Purple.png" id="6_y01nm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y01nm"]
+atlas = ExtResource("5_jibqm")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amxww"]
+atlas = ExtResource("5_jibqm")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5esas"]
+atlas = ExtResource("5_jibqm")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v52jq"]
+atlas = ExtResource("5_jibqm")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6itn1"]
+atlas = ExtResource("5_jibqm")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4sye"]
+atlas = ExtResource("5_jibqm")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_amxww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y01nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amxww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5esas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v52jq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6itn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4sye")
+}],
+"loop": true,
+"name": &"idle_npc",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfup1"]
+atlas = ExtResource("6_y01nm")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugcgr"]
+atlas = ExtResource("6_y01nm")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pukfh"]
+atlas = ExtResource("6_y01nm")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6t7n"]
+atlas = ExtResource("6_y01nm")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3bew"]
+atlas = ExtResource("6_y01nm")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q50n"]
+atlas = ExtResource("6_y01nm")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y01nm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfup1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugcgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pukfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6t7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3bew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q50n")
+}],
+"loop": true,
+"name": &"idle_warrior",
+"speed": 5.0
+}]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_14md5")
@@ -17,8 +119,17 @@ position = Vector2(189, -27)
 [node name="Items2" parent="." instance=ExtResource("2_xsss1")]
 position = Vector2(223, -5)
 
-[node name="Quests" parent="." instance=ExtResource("3_xsss1")]
-position = Vector2(60, -16)
+[node name="Npcs" parent="." instance=ExtResource("3_xsss1")]
+position = Vector2(53, -11)
+quest_text = "Brendo"
+sprite_frames = SubResource("SpriteFrames_amxww")
+animation_name = "idle_npc"
+
+[node name="Npcs2" parent="." instance=ExtResource("3_xsss1")]
+position = Vector2(52, 58)
+quest_text = "Servolo"
+sprite_frames = SubResource("SpriteFrames_y01nm")
+animation_name = "idle_warrior"
 
 [node name="Character" parent="." instance=ExtResource("5_5t6ri")]
 position = Vector2(283, 68)
