@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://k00yvrjm63ux"]
 
-[ext_resource type="Script" uid="uid://d28bxv4mt727f" path="res://npc/script/npcs.gd" id="1_66myh"]
+[ext_resource type="Script" path="res://npc/script/npcs.gd" id="1_66myh"]
 [ext_resource type="PackedScene" uid="uid://5ypvcel7aw54" path="res://KeyboardLabel/Label_keyboard.tscn" id="4_ldo70"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nhy3c"]
