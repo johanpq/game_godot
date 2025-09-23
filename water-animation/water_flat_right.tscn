@@ -1,0 +1,102 @@
+[gd_scene load_steps=15 format=3 uid="uid://c111qfipbdcir"]
+
+[ext_resource type="Texture2D" uid="uid://glsph32r50kb" path="res://Tiny Swords (Free Pack)/Terrain/Water_FlatGround_#3_(12frames).png" id="1_s1y2a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35kma"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jaow"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isibt"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk7ve"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m52oj"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81kbl"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_253q0"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vn8p"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2va8e"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbwjy"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nokf3"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnjrd"]
+atlas = ExtResource("1_s1y2a")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o48i4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35kma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jaow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isibt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk7ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m52oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81kbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_253q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vn8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2va8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbwjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nokf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnjrd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="water-flat-right" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o48i4")
+autoplay = "default"
+frame_progress = 0.512905
