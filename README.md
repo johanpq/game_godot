@@ -38,3 +38,13 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 
 - **Linguagem:** O presente jogo foi desenvolvido utilizando a linguagem GDScript. Acesse [Godot Docs](https://docs.godotengine.org/pt-br/4.x/tutorials/scripting/gdscript/gdscript_basics.html) para mais informações.
 - **Engine:** Como motor grafico utilizamos a engine open source e com baixa curva de aprendizado. Acesse [Godot](https://godotengine.org/) para mais informações.
+
+## Equipe de Desenvolvimento
+
+- Johan Queiroz
+- Servolo Pedro
+- Brendo Duarte
+
+## Licença
+
+Este projeto é licenciado sob a [Licença MIT](LICENSE).
