@@ -5,6 +5,7 @@
 - [Descrição](#descrição)
 - [Funcionalidades](#funcionalidades)
 - [Diagrama de Classes](#diagrama-de-classes)
+- [Diagrama de Casos de Uso](#diagrama-de-casos-de-uso)
 - [Requisitos](#requisitos)
 - [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
 - [Licença](#licença)
@@ -26,6 +27,12 @@ O planeta está em perigo e só você pode salvá-lo! Colete, recicle, e derrote
 ![Diagrama de Classes](/images/diagrama.jpeg)
 
 O diagrama de classes do projeto mostra as principais entidades e suas interações, como 'PlayerCharacter', 'Npc', 'Items' e 'Scenarios'.
+
+## Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](/images/Diagrama%20de%20caso%20de%20uso.svg)
+
+O diagrama de casos de uso apresenta as principais funcionalidades disponíveis aos atores e suas interações com o sistema. O jogador pode controlar o personagem principal, interagir com NPCs para receber missões, coletar e utilizar itens no cenário e acompanhar o progresso do jogo. Além disso, o sistema gerencia automaticamente eventos como a remoção de itens e a finalização de objetivos, garantindo a continuidade da narrativa e a experiência de jogo.
 
 ## Requisitos
 
