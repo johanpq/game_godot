@@ -6,7 +6,6 @@
 - [Funcionalidades](#funcionalidades)
 - [Diagrama de Classes](#diagrama-de-classes)
 - [Requisitos](#requisitos)
-- [Instalações](#instalações)
 - [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
 - [Licença](#licença)
 
@@ -33,4 +32,12 @@ O diagrama de classes do projeto mostra as principais entidades e suas interaç�
 - **Linguagem:** O presente jogo foi desenvolvido utilizando a linguagem GDScript. Acesse [Godot Docs](https://docs.godotengine.org/pt-br/4.x/tutorials/scripting/gdscript/gdscript_basics.html) para mais informações.
 - **Engine:** [Godot](https://godotengine.org/) 
 
+## Equipe de Desenvolvimento
 
+- Johan Queiroz
+- Servolo Pedro
+- Brendo Duarte
+
+## Licença
+
+Este projeto é licenciado sob a [Licença MIT](LICENSE).
