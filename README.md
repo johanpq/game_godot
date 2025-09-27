@@ -6,6 +6,7 @@
 - [Funcionalidades](#funcionalidades)
 - [Diagrama de Classes](#diagrama-de-classes)
 - [Diagrama de Casos de Uso](#diagrama-de-casos-de-uso)
+- [Requesitos](#requesitos)
 - [Tecnologias](#tecnologias)
 - [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
 - [Licença](#licença)
@@ -32,6 +33,22 @@ O diagrama de classes do projeto mostra as principais entidades e suas interaç�
 ![Diagrama de Casos de Uso](/images/Diagrama%20de%20caso%20de%20uso.png)
 
 O diagrama de casos de uso apresenta as principais funcionalidades disponíveis aos atores e suas interações com o sistema. O jogador pode controlar o personagem principal, interagir com NPCs para receber missões, coletar e utilizar itens no cenário e acompanhar o progresso do jogo. Além disso, o sistema gerencia automaticamente eventos como a remoção de itens e a finalização de objetivos, garantindo a continuidade da narrativa e a experiência de jogo.
+
+## Requesitos
+
+### Funcionais
+
+- O jogador pode se mover em 8 direções.
+- O jogador e NPCs devem ter animações.
+- O jogo deve ter NPCs.
+- O jogador interage com NPC 's.
+- O jogo deve registrar colisões entre objetos.
+- O jogo deve permitir que itens sejam coletáveis.
+- O jogo deve exibir mensagens ou ícones de interação quando o personagem entra em uma área de ação.
+- O jogo deve ter diversos cenários.
+- O jogo deve ter mobs para serem derrotados.
+
+
 
 ## Tecnologias
 
