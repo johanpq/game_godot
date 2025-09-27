@@ -39,6 +39,7 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 **Funcionais:**
 
 - O jogador pode se mover em 8 direções.
+- O jogador pode controlar o personagen usando as teclas de movimentação devem seguir o padrão WASD ou as setas direcionais.
 - O jogador e NPCs devem ter animações.
 - O jogo deve ter NPCs.
 - O jogador interage com NPC 's.
@@ -51,7 +52,6 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 **Não funcionais:**
 
 - Estilo visual: O jogo deve adotar uma estética pixel art.
-- Padrão de controle: As teclas de movimentação devem seguir o padrão WASD ou as setas direcionais.
 - Balanceamento: O jogo deve manter uma curva de dificuldade progressiva, evitando que o jogador enfrente inimigos impossíveis logo no início.
 - Trilha sonora e efeito: O jogo deve possuir música ambiente e efeitos sonoros para ações principais (coletar item, atacar, interagir).
 
