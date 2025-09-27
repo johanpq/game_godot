@@ -26,7 +26,7 @@ O planeta está em perigo e só você pode salvá-lo! Colete, recicle, e derrote
 
 ![Diagrama de Classes](/images/diagrama.jpeg)
 
-O diagrama de classes do projeto mostra as principais entidades e suas interações, como 'PlayerCharacter', 'Npc', 'Items' e 'Scenarios'.
+O diagrama de classes do projeto mostra as principais entidades e suas interações, como 'PlayerCharacter', 'Npc' e 'Items'.
 
 ## Diagrama de Casos de Uso
 
