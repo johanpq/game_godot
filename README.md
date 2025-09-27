@@ -2,7 +2,7 @@
 
 ## Tópicos
 
-- [Descrição](#descrição)
+- [Definição do Projeto](#definição-do-projeto)
 - [Funcionalidades](#funcionalidades)
 - [Diagrama de Classes](#diagrama-de-classes)
 - [Diagrama de Casos de Uso](#diagrama-de-casos-de-uso)
@@ -11,9 +11,9 @@
 - [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
 - [Licença](#licença)
 
-## Descrição
+## Definição do Projeto
 
-O planeta está em perigo e só você pode salvá-lo! Colete, recicle, e derrote os vilões da poluição em uma aventura 2D cheia de cores, ação e consciência ambiental.
+O projeto consiste na criação de um jogo 2D single player, em visão top-down, voltado para crianças, com foco em conscientizar e incentivar o uso dos Objetivos de Desenvolvimento Sustentável (ODS). Será desenvolvido na engine Godot, utilizando GDScript, aproveitando sua leveza, praticidade e caráter open source. O objetivo é entregar um MVP funcional e interativo para o público infantil.
 
 ## Funcionalidades
 
