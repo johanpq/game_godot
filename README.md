@@ -41,9 +41,9 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 
 ## Equipe de Desenvolvimento
 
+- Brendo Duarte
 - Johan Queiroz
 - Servolo Pedro
-- Brendo Duarte
 
 ## Licença
 
