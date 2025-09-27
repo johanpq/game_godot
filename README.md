@@ -13,7 +13,7 @@
 
 ## Definição do Projeto
 
-O projeto consiste na criação de um jogo 2D single player, em visão top-down, voltado para crianças, com foco em conscientizar e incentivar o uso dos Objetivos de Desenvolvimento Sustentável (ODS). Será desenvolvido na engine Godot, utilizando GDScript, aproveitando sua leveza, praticidade e caráter open source. O objetivo é entregar um MVP funcional e interativo para o público infantil.
+O projeto consiste na criação de um jogo 2D single player, em visão top-down, voltado para crianças, com foco em conscientizar e incentivar o uso dos Objetivos de Desenvolvimento Sustentável (ODS). Será desenvolvido na engine **Godot**, utilizando **GDScript**, aproveitando sua leveza, praticidade e caráter open source. O objetivo é entregar um **MVP funcional e interativo** para o público infantil.
 
 ## Funcionalidades
 
