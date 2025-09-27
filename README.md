@@ -36,7 +36,7 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 
 ## Requesitos
 
-- **Funcionais**
+**Funcionais**
 
 - O jogador pode se mover em 8 direções.
 - O jogador e NPCs devem ter animações.
@@ -48,7 +48,7 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 - O jogo deve ter diversos cenários.
 - O jogo deve ter mobs para serem derrotados.
 
-- **Não funcionais**
+**Não funcionais**
 
 - Estilo visual: O jogo deve adotar uma estética pixel art.
 - Padrão de controle: As teclas de movimentação devem seguir o padrão WASD ou as setas direcionais.
