@@ -17,10 +17,10 @@ O projeto consiste na criação de um jogo 2D single player, em visão top-down,
 
 ## Funcionalidades
 
-- **Tutorial:** Sistema de tutorial para o jogador possa aprender os comandos basicos do game.
-- **Mecanica de NPC:** Mecanica de NPC's, onde o jogador pode interagir para iniciar missões.
+- **Tutorial:** Sistema de tutorial para o jogador possa aprender os comandos básicos do game.
+- **Mecânica de NPC:** Mecânica de NPCs, onde o jogador pode interagir para iniciar missões.
 - **Exploração:** Mapa com diversos detalhes e atividades para o jogador explorar.
-- **Combate:** Mecanica de combate contra inimigos.
+- **Combate:** Mecânica de combate contra inimigos.
 
 ## Diagrama de Classes
 
@@ -39,7 +39,7 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 **Funcionais:**
 
 - O jogador pode se mover em 8 direções.
-- O jogador pode controlar o personagen usando as teclas de movimentação devem seguir o padrão WASD ou as setas direcionais.
+- O jogador pode controlar o personagem usando as teclas de movimentação devem seguir o padrão WASD ou as setas direcionais.
 - O jogador e NPCs devem ter animações.
 - O jogo deve ter NPCs.
 - O jogador interage com NPC 's.
@@ -53,12 +53,12 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 
 - Estilo visual: O jogo deve adotar uma estética pixel art.
 - Balanceamento: O jogo deve manter uma curva de dificuldade progressiva, evitando que o jogador enfrente inimigos impossíveis logo no início.
-- Trilha sonora e efeito: O jogo deve possuir música ambiente e efeitos sonoros para ações principais (coletar item, atacar, interagir).
+- Trilha sonora e efeitos: O jogo deve possuir música ambiente e efeitos sonoros para ações principais (coletar item, atacar, interagir).
 
 ## Tecnologias
 
 - **Linguagem:** O presente jogo foi desenvolvido utilizando a linguagem GDScript. Acesse [Godot Docs](https://docs.godotengine.org/pt-br/4.x/tutorials/scripting/gdscript/gdscript_basics.html) para mais informações.
-- **Engine:** Como motor grafico utilizamos a engine open source e com baixa curva de aprendizado. Acesse [Godot](https://godotengine.org/) para mais informações.
+- **Engine:** Como motor gráfico utilizamos a engine open source e com baixa curva de aprendizado. Acesse [Godot](https://godotengine.org/) para mais informações.
 
 ## Equipe de Desenvolvimento
 
