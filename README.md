@@ -7,6 +7,7 @@
 - [Diagrama de Classes](#diagrama-de-classes)
 - [Diagrama de Casos de Uso](#diagrama-de-casos-de-uso)
 - [Requisitos](#requisitos)
+- [Plano De Teste](#plano-de-teste)
 - [Tecnologias](#tecnologias)
 - [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
 - [Licença](#licença)
@@ -54,6 +55,13 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 - Estilo visual: O jogo deve adotar uma estética pixel art.
 - Balanceamento: O jogo deve manter uma curva de dificuldade progressiva, evitando que o jogador enfrente inimigos impossíveis logo no início.
 - Trilha sonora e efeitos: O jogo deve possuir música ambiente e efeitos sonoros para ações principais (coletar item, atacar, interagir).
+
+## Plano de teste
+
+- Você pode acessar o documento completo aqui:
+
+[Abrir Plano de Teste (PDF)](./Plano_de_teste.pdf)
+
 
 ## Tecnologias
 
