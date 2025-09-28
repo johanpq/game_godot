@@ -60,7 +60,7 @@ O diagrama de casos de uso apresenta as principais funcionalidades disponíveis 
 
 - Você pode acessar o documento completo aqui:
 
-[Abrir Plano de Teste (PDF)](./Plano_de_teste.pdf)
+- [Abrir Plano de Teste (PDF)](./Plano_de_teste.pdf)
 
 
 ## Tecnologias
