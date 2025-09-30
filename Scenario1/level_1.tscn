@@ -124,12 +124,22 @@ position = Vector2(53, -11)
 sprite_frames = SubResource("SpriteFrames_amxww")
 animation_name = "idle_npc"
 name_npc = "Brendo"
+next_npc = "Servolo"
 
 [node name="Npcs2" parent="." instance=ExtResource("3_xsss1")]
-position = Vector2(52, 58)
+position = Vector2(20, 68)
 sprite_frames = SubResource("SpriteFrames_y01nm")
 animation_name = "idle_warrior"
 name_npc = "Servolo"
+required_npc = "Brendo"
+next_npc = "Johan"
+
+[node name="Npcs3" parent="." instance=ExtResource("3_xsss1")]
+position = Vector2(52, 58)
+sprite_frames = SubResource("SpriteFrames_y01nm")
+animation_name = "idle_warrior"
+name_npc = "Johan"
+required_npc = "Servolo"
 
 [node name="Character" parent="." instance=ExtResource("5_5t6ri")]
 position = Vector2(283, 68)

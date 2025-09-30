@@ -14,12 +14,16 @@ class_name Npc
 @export var labelKeyboard: Node2D
 @export var mural_npc: PanelContainer
 @export var name_npc: String
+@export var required_npc: String
+@export var next_npc: String
 @export var title_mural: RichTextLabel
 @export var text_mural: RichTextLabel
 
 var player_in_area = false
 var dialogue_index: int = 0
 var dialogue_open: bool = false
+var completed_quest: bool = false
+var _blocked_message_shown: bool = false
 
 @onready var sprite: AnimatedSprite2D = $Npc/Texture
 
@@ -37,15 +41,45 @@ func _ready() -> void:
 
 # Abre/fecha o painel de diálogo
 func toggle_dialogue():
+	# 1) Fechar mensagem de bloqueio
+	if dialogue_open and _blocked_message_shown:
+		_blocked_message_shown = false
+		_close_dialogue()
+		return
+
+	# 2) Fechar modal de quest concluída
+	if dialogue_open and completed_quest:
+		_close_dialogue()
+		return
+
+	# 3) Abrir diálogo
 	if not dialogue_open:
-		# começa o diálogo
-		dialogue_index = 0
-		_show_current_dialogue()
+		# Mensagem de bloqueio
+		if required_npc != "" and not (required_npc in GlobalVariables.quest_completed):
+			title_mural.text = name_npc
+			text_mural.text = "Conclua a tarefa com " + required_npc + " para liberar esta!"
+			_blocked_message_shown = true
+
+		# Mensagem de quest concluída
+		elif name_npc in GlobalVariables.quest_completed:
+			completed_quest = true
+			title_mural.text = name_npc
+			text_mural.text = "Tarefa concluida! Agora procure " + next_npc
+
+		# Diálogo normal
+		else:
+			dialogue_index = 0
+			_show_current_dialogue()
+
+		dialogue_open = true
 		GlobalVariables.quest_open = true
 		mural_npc.visible = true
-		dialogue_open = true
+
+	# 4) Navegar no diálogo normal
 	else:
-		_next_dialogue()
+		if not completed_quest and not _blocked_message_shown:
+			_next_dialogue()
+
 
 # Mostra a fala atual
 func _show_current_dialogue():
@@ -70,6 +104,7 @@ func _close_dialogue():
 	mural_npc.visible = false
 	dialogue_open = false
 	dialogue_index = 0
+	_blocked_message_shown = false
 
 func open_label_keyboard(_keyboard: String):
 	var label_label = labelKeyboard.get_node("Label") as Label
