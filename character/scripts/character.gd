@@ -35,6 +35,9 @@ func _move(_delta: float) -> void:
 	)
 	
 	if direction != Vector2.ZERO:
+		if GlobalVariables.quest_open:
+			return
+			
 		var normalized_dir = direction.normalized()
 		
 		velocity.x = lerp(velocity.x, normalized_dir.x * move_speed, acceleration)
