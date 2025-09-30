@@ -20,4 +20,4 @@ func out_area(_body: Node) -> void:
 
 func _physics_process(_delta: float) -> void:
 	if player_inside and Input.is_action_just_pressed("get_item"):
-		Item.remoteItem()
+		Item.removeItem()
