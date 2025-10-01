@@ -7,10 +7,12 @@ class_name PlayerCharacter  # nome da classe
 @export var acceleration: float = 0.2
 
 @export_category("Objects")
+@export var _attack_timer: Timer = null
 @export var animation_tree: AnimationTree
 
 # --- Variáveis internas ---
 var state_machine
+var is_attack: bool = false
 
 func _ready() -> void:
 	# Se não tiver atribuído no inspetor, pega pelo nome
@@ -24,6 +26,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	_move(_delta)
+	_attack()
 	_animate()
 	move_and_slide()
 
@@ -46,16 +49,32 @@ func _move(_delta: float) -> void:
 		if animation_tree:
 			animation_tree["parameters/idle/blend_position"] = normalized_dir
 			animation_tree["parameters/walk/blend_position"] = normalized_dir
+			animation_tree["parameters/attack/blend_position"] = normalized_dir
 	else:
 		velocity.x = lerp(velocity.x, 0.0, friction)
 		velocity.y = lerp(velocity.y, 0.0, friction)
 
+func _attack() -> void:
+	if Input.is_action_just_pressed("attack") and not is_attack:
+		#set_physics_process(false)
+		_attack_timer.start()
+		is_attack = true
+		
 # --- Método de animação ---
 func _animate() -> void:
 	if state_machine == null:
 		return
 	
+	if is_attack:
+		state_machine.travel("attack")
+		return
+		
 	if velocity.length() > 10:
 		state_machine.travel("walk")
 	else:
 		state_machine.travel("idle")
+
+
+func _on_attack_timer_timeout() -> void:
+	#set_physics_process(true)
+	is_attack = false

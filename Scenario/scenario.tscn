@@ -10,13 +10,13 @@
 [node name="Water" parent="." instance=ExtResource("1_iwm72")]
 
 [node name="Npcs" parent="." instance=ExtResource("2_blswb")]
-position = Vector2(186, 86)
+position = Vector2(-71, 69)
 
 [node name="Npcs2" parent="." instance=ExtResource("2_blswb")]
-position = Vector2(184, 134)
+position = Vector2(-33, 123)
 
 [node name="Items" parent="." instance=ExtResource("3_0rbo8")]
-position = Vector2(332, 46)
+position = Vector2(138, 90)
 
 [node name="Items2" parent="." instance=ExtResource("3_0rbo8")]
 position = Vector2(328, 6)
