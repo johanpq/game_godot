@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d0825uxp8afud" path="res://TitleMapLayer/tile_map_layer.tscn" id="1_iwm72"]
 [ext_resource type="PackedScene" uid="uid://k00yvrjm63ux" path="res://npc/npc.tscn" id="2_blswb"]
 [ext_resource type="PackedScene" uid="uid://cicvfpmq5ime2" path="res://items/items.tscn" id="3_0rbo8"]
-[ext_resource type="PackedScene" uid="uid://c5xviqa6tjxo8" path="res://character.tscn" id="4_1eo50"]
+[ext_resource type="PackedScene" uid="uid://c5xviqa6tjxo8" path="res://character/character.tscn" id="4_1eo50"]
 
 [node name="Scenario" type="Node2D"]
 
