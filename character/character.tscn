@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://da6ycmw1bshin"]
+[gd_scene load_steps=34 format=3 uid="uid://c5xviqa6tjxo8"]
 
 [ext_resource type="Script" uid="uid://dwupi8itmfwt1" path="res://character/scripts/character.gd" id="1_pjt0s"]
 [ext_resource type="Texture2D" uid="uid://drrcxl6nb0b1n" path="res://character/assets/player.png" id="2_wa5vi"]
@@ -43,6 +43,170 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0.5, -17)]
+}
+
+[sub_resource type="Animation" id="Animation_c1b4b"]
+resource_name = "atack_idle"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, -17)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [36, 37, 38, 39]
+}
+
+[sub_resource type="Animation" id="Animation_7tnxx"]
+resource_name = "atack_left"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, -17)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [42, 43, 44, 45]
+}
+
+[sub_resource type="Animation" id="Animation_bwfjh"]
+resource_name = "atack_right"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, -17)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [42, 43, 44, 45]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_x1sy7"]
+resource_name = "atack_top"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texture:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, -17)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [48, 49, 50, 51]
 }
 
 [sub_resource type="Animation" id="Animation_pjt0s"]
@@ -375,6 +539,10 @@ tracks/2/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wfnr8"]
 _data = {
 &"RESET": SubResource("Animation_wa5vi"),
+&"atack_idle": SubResource("Animation_c1b4b"),
+&"atack_left": SubResource("Animation_7tnxx"),
+&"atack_right": SubResource("Animation_bwfjh"),
+&"atack_top": SubResource("Animation_x1sy7"),
 &"idle_down": SubResource("Animation_pjt0s"),
 &"idle_left": SubResource("Animation_px5sl"),
 &"idle_right": SubResource("Animation_wfnr8"),
@@ -384,6 +552,29 @@ _data = {
 &"idle_walk_right": SubResource("Animation_wdpcj"),
 &"idle_walk_up": SubResource("Animation_jb3kq")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7tnxx"]
+animation = &"atack_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bwfjh"]
+animation = &"atack_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jb3kq"]
+animation = &"atack_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c1b4b"]
+animation = &"atack_top"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_x1sy7"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_7tnxx")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_bwfjh")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_jb3kq")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_c1b4b")
+blend_point_3/pos = Vector2(0, -1)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pjt0s"]
 animation = &"idle_down"
@@ -431,18 +622,22 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_qi5as")
 blend_point_3/pos = Vector2(1, 0)
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_yxww1"]
+states/attack/node = SubResource("AnimationNodeBlendSpace2D_x1sy7")
+states/attack/position = Vector2(393.3, 218)
 states/idle/node = SubResource("AnimationNodeBlendSpace2D_0qfo5")
 states/idle/position = Vector2(393.333, 105.111)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_jb3kq")
-states/walk/position = Vector2(392.444, 186)
+states/walk/position = Vector2(393.761, 159.333)
+graph_offset = Vector2(0, 25.3444)
 
-[node name="Character" type="CharacterBody2D"]
+[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_attack_timer", "animation_tree")]
 collision_mask = 3
 script = ExtResource("1_pjt0s")
+_attack_timer = NodePath("AttackTimer")
+animation_tree = NodePath("AnimationTree")
 
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(0.5, -17)
-scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_wa5vi")
 hframes = 6
 vframes = 10
@@ -459,8 +654,19 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_yxww1")
 anim_player = NodePath("../AnimationPlayer")
+parameters/attack/blend_position = Vector2(-0.0196987, 0.813433)
 parameters/idle/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
 
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 0.7
+one_shot = true
+
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.6, 1.6)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 510
+limit_bottom = 320
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
