@@ -22,5 +22,5 @@ position = Vector2(138, 90)
 position = Vector2(328, 6)
 
 [node name="Character" parent="." instance=ExtResource("4_1eo50")]
-position = Vector2(124, 160)
+position = Vector2(64, 185)
 scale = Vector2(0.5, 0.5)
