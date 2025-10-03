@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://k00yvrjm63ux"]
+[gd_scene load_steps=6 format=3 uid="uid://k00yvrjm63ux"]
 
 [ext_resource type="Script" uid="uid://d28bxv4mt727f" path="res://npc/script/npcs.gd" id="1_66myh"]
 [ext_resource type="PackedScene" uid="uid://5ypvcel7aw54" path="res://KeyboardLabel/Label_keyboard.tscn" id="4_ldo70"]
@@ -7,6 +7,21 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66myh"]
 size = Vector2(20, 26)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhy3c"]
+content_margin_left = 2.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.941165, 0.955695, 0.996583, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 3
 
 [node name="Npcs" type="Node2D" node_paths=PackedStringArray("labelKeyboard", "mural_npc", "title_mural", "text_mural")]
 script = ExtResource("1_66myh")
@@ -37,18 +52,18 @@ position = Vector2(225, 25)
 [node name="CanvasLayer" type="CanvasLayer" parent="Npc/Area2D"]
 
 [node name="Mural" type="PanelContainer" parent="Npc/Area2D/CanvasLayer"]
-visible = false
 offset_right = 77.0
 offset_bottom = 43.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nhy3c")
 
 [node name="Title" type="RichTextLabel" parent="Npc/Area2D/CanvasLayer/Mural"]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 9
-text = "Default"
+theme_override_font_sizes/normal_font_size = 7
+text = "tseste"
 
 [node name="Text" type="RichTextLabel" parent="Npc/Area2D/CanvasLayer/Mural"]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 6
+theme_override_font_sizes/normal_font_size = 5
 text = "default"
 horizontal_alignment = 1
 vertical_alignment = 1

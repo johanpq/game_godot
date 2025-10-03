@@ -8,6 +8,13 @@ class_name Npc
 	"Volte aqui quando terminar!"
 ]
 
+var typing_speed := 0.03  # tempo entre letras (em segundos)
+var typing_timer := 0.0
+var full_text := ""
+var current_text := ""
+var is_typing := false
+
+
 @export var sprite_frames: SpriteFrames
 @export var animation_name: String = "default"
 
@@ -85,10 +92,14 @@ func toggle_dialogue():
 func _show_current_dialogue():
 	if dialogues.size() > 0 and dialogue_index < dialogues.size():
 		title_mural.text = name_npc
-		text_mural.text = dialogues[dialogue_index]
+		full_text = dialogues[dialogue_index]
+		current_text = ""
+		text_mural.text = ""
+		is_typing = true
+		typing_timer = 0.0
 	else:
-		# se não tiver mais falas, fecha
 		_close_dialogue()
+
 
 # Vai para a próxima fala
 func _next_dialogue():
@@ -124,5 +135,15 @@ func out_area(_body: Node2D) -> void:
 	_close_dialogue()
 
 func _process(_delta: float) -> void:
+	if is_typing:
+		typing_timer += _delta
+	if typing_timer >= typing_speed:
+		typing_timer = 0.0
+		if current_text.length() < full_text.length():
+			current_text += full_text[current_text.length()]
+			text_mural.text = current_text
+		else:
+			is_typing = false
+
 	if player_in_area and Input.is_action_just_pressed("mural_quests"):
 		toggle_dialogue()

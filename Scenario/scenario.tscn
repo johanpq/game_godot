@@ -139,7 +139,7 @@ scale = Vector2(0.44, 0.44)
 sprite_frames = SubResource("SpriteFrames_ckxih")
 
 [node name="Warming" parent="." instance=ExtResource("6_0rbo8")]
-position = Vector2(119, 142)
+position = Vector2(8, 112)
 
 [node name="Character" parent="." instance=ExtResource("4_1eo50")]
 position = Vector2(37, 161)
