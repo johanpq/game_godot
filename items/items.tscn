@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cicvfpmq5ime2"]
+[gd_scene load_steps=6 format=3 uid="uid://cicvfpmq5ime2"]
 
+[ext_resource type="Script" uid="uid://bvolp5rut4seb" path="res://items/script/items.gd" id="1_fae3u"]
 [ext_resource type="Texture2D" uid="uid://73v5jasxpxof" path="res://terrain/assets/interior/grass.png" id="1_pxpuq"]
 [ext_resource type="Script" uid="uid://33qix4lv4bth" path="res://items/script/item.gd" id="2_fae3u"]
 [ext_resource type="PackedScene" uid="uid://5ypvcel7aw54" path="res://KeyboardLabel/Label_keyboard.tscn" id="3_k7rtb"]
@@ -8,7 +9,7 @@
 size = Vector2(30, 23)
 
 [node name="Items" type="Node2D"]
-script = ExtResource("2_fae3u")
+script = ExtResource("1_fae3u")
 
 [node name="item" type="Node2D" parent="."]
 position = Vector2(-18, 25)

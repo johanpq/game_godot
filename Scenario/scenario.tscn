@@ -9,18 +9,18 @@
 
 [node name="Water" parent="." instance=ExtResource("1_iwm72")]
 
+[node name="Items" parent="." instance=ExtResource("3_0rbo8")]
+position = Vector2(125, 97)
+
+[node name="Items2" parent="." instance=ExtResource("3_0rbo8")]
+position = Vector2(89, 97)
+
 [node name="Npcs" parent="." instance=ExtResource("2_blswb")]
 position = Vector2(-71, 69)
 
 [node name="Npcs2" parent="." instance=ExtResource("2_blswb")]
 position = Vector2(-33, 123)
 
-[node name="Items" parent="." instance=ExtResource("3_0rbo8")]
-position = Vector2(138, 90)
-
-[node name="Items2" parent="." instance=ExtResource("3_0rbo8")]
-position = Vector2(328, 6)
-
 [node name="Character" parent="." instance=ExtResource("4_1eo50")]
-position = Vector2(64, 185)
+position = Vector2(144, 127)
 scale = Vector2(0.5, 0.5)
