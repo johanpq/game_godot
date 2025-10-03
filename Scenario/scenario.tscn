@@ -1,26 +1,146 @@
-[gd_scene load_steps=5 format=3 uid="uid://bfl0bwcxhfrci"]
+[gd_scene load_steps=21 format=3 uid="uid://bfl0bwcxhfrci"]
 
 [ext_resource type="PackedScene" uid="uid://d0825uxp8afud" path="res://TitleMapLayer/tile_map_layer.tscn" id="1_iwm72"]
 [ext_resource type="PackedScene" uid="uid://k00yvrjm63ux" path="res://npc/npc.tscn" id="2_blswb"]
-[ext_resource type="PackedScene" uid="uid://cicvfpmq5ime2" path="res://items/items.tscn" id="3_0rbo8"]
+[ext_resource type="Texture2D" uid="uid://vh5fwiofp517" path="res://Tiny Swords (Free Pack)/Units/Black Units/Monk/Idle.png" id="3_iwm72"]
 [ext_resource type="PackedScene" uid="uid://c5xviqa6tjxo8" path="res://character/character.tscn" id="4_1eo50"]
+[ext_resource type="Texture2D" uid="uid://syiu7c8nhenr" path="res://Tiny Swords (Free Pack)/Units/Black Units/Archer/Archer_Idle.png" id="4_blswb"]
+[ext_resource type="PackedScene" uid="uid://nanf2cwywhgx" path="res://warming/warming.tscn" id="6_0rbo8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blswb"]
+atlas = ExtResource("3_iwm72")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rbo8"]
+atlas = ExtResource("3_iwm72")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1eo50"]
+atlas = ExtResource("3_iwm72")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e38fm"]
+atlas = ExtResource("3_iwm72")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dioyc"]
+atlas = ExtResource("3_iwm72")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4q8j"]
+atlas = ExtResource("3_iwm72")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_15ync"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blswb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rbo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1eo50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e38fm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dioyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4q8j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_332gm"]
+atlas = ExtResource("4_blswb")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkqfg"]
+atlas = ExtResource("4_blswb")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsc1k"]
+atlas = ExtResource("4_blswb")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfce6"]
+atlas = ExtResource("4_blswb")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1tl3"]
+atlas = ExtResource("4_blswb")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia8cj"]
+atlas = ExtResource("4_blswb")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckxih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_332gm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkqfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsc1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfce6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1tl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia8cj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Scenario" type="Node2D"]
 
 [node name="Water" parent="." instance=ExtResource("1_iwm72")]
 
-[node name="Items" parent="." instance=ExtResource("3_0rbo8")]
-position = Vector2(125, 97)
-
-[node name="Items2" parent="." instance=ExtResource("3_0rbo8")]
-position = Vector2(89, 97)
-
 [node name="Npcs" parent="." instance=ExtResource("2_blswb")]
-position = Vector2(-71, 69)
+position = Vector2(-13, 142)
+scale = Vector2(0.44, 0.44)
+sprite_frames = SubResource("SpriteFrames_15ync")
+name_npc = "Utah"
+next_npc = "Hamp"
 
-[node name="Npcs2" parent="." instance=ExtResource("2_blswb")]
-position = Vector2(-33, 123)
+[node name="Archer-1" parent="." instance=ExtResource("2_blswb")]
+position = Vector2(10, 108)
+scale = Vector2(0.44, 0.44)
+sprite_frames = SubResource("SpriteFrames_ckxih")
+
+[node name="Archer-2" parent="." instance=ExtResource("2_blswb")]
+position = Vector2(-65, 75)
+scale = Vector2(0.44, 0.44)
+sprite_frames = SubResource("SpriteFrames_ckxih")
+
+[node name="Archer-3" parent="." instance=ExtResource("2_blswb")]
+position = Vector2(-40, 80)
+scale = Vector2(0.44, 0.44)
+sprite_frames = SubResource("SpriteFrames_ckxih")
+
+[node name="Archer-4" parent="." instance=ExtResource("2_blswb")]
+position = Vector2(-13, 75)
+scale = Vector2(0.44, 0.44)
+sprite_frames = SubResource("SpriteFrames_ckxih")
+
+[node name="Warming" parent="." instance=ExtResource("6_0rbo8")]
+position = Vector2(119, 142)
 
 [node name="Character" parent="." instance=ExtResource("4_1eo50")]
-position = Vector2(144, 127)
+position = Vector2(37, 161)
 scale = Vector2(0.5, 0.5)
