@@ -67,9 +67,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxhqb"]
-size = Vector2(55.0001, 45)
+size = Vector2(52.3438, 32.5)
 
 [node name="Trees-1" type="Node2D"]
+y_sort_enabled = true
 scale = Vector2(0.2, 0.2)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -81,36 +82,6 @@ frame = 1
 frame_progress = 0.649021
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1.90735e-06, 92.5)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_yxhqb")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-20, 62.5)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_yxhqb")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(27.5, 60)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_yxhqb")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-10, 17.5)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_yxhqb")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(17.5, 15)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_yxhqb")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2.5, -27.5)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_yxhqb")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2.5, -47.5)
-scale = Vector2(0.999999, 0.999999)
+position = Vector2(0, 95)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_yxhqb")
