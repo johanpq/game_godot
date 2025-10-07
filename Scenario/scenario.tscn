@@ -1,10 +1,9 @@
-[gd_scene load_steps=44 format=4 uid="uid://bfl0bwcxhfrci"]
+[gd_scene load_steps=35 format=4 uid="uid://bfl0bwcxhfrci"]
 
 [ext_resource type="PackedScene" uid="uid://d0825uxp8afud" path="res://TitleMapLayer/tile_map_layer.tscn" id="1_iwm72"]
 [ext_resource type="PackedScene" uid="uid://k00yvrjm63ux" path="res://npc/npc.tscn" id="2_blswb"]
 [ext_resource type="Texture2D" uid="uid://vh5fwiofp517" path="res://Tiny Swords (Free Pack)/Units/Black Units/Monk/Idle.png" id="3_iwm72"]
 [ext_resource type="PackedScene" uid="uid://c5xviqa6tjxo8" path="res://character/character.tscn" id="4_1eo50"]
-[ext_resource type="Texture2D" uid="uid://syiu7c8nhenr" path="res://Tiny Swords (Free Pack)/Units/Black Units/Archer/Archer_Idle.png" id="4_blswb"]
 [ext_resource type="PackedScene" uid="uid://nanf2cwywhgx" path="res://warming/warming.tscn" id="6_0rbo8"]
 [ext_resource type="PackedScene" uid="uid://cydtjy474h63f" path="res://trees/trees_1.tscn" id="7_1eo50"]
 [ext_resource type="Texture2D" uid="uid://cpmchlb8l5als" path="res://Tiny Swords (Free Pack)/Buildings/Red Buildings/House2.png" id="8_e38fm"]
@@ -15,89 +14,33 @@
 [ext_resource type="Texture2D" uid="uid://dossqhwwkr280" path="res://Tiny Swords (Free Pack)/Buildings/Black Buildings/Tower.png" id="13_ckxih"]
 [ext_resource type="Texture2D" uid="uid://7kpwntj778pc" path="res://Tiny Swords (Free Pack)/Buildings/Red Buildings/Tower.png" id="14_obhoj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_blswb"]
-atlas = ExtResource("3_iwm72")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0rbo8"]
-atlas = ExtResource("3_iwm72")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1eo50"]
-atlas = ExtResource("3_iwm72")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e38fm"]
-atlas = ExtResource("3_iwm72")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dioyc"]
-atlas = ExtResource("3_iwm72")
-region = Rect2(768, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d4q8j"]
-atlas = ExtResource("3_iwm72")
-region = Rect2(960, 0, 192, 192)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_15ync"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_blswb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0rbo8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1eo50")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e38fm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dioyc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d4q8j")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_332gm"]
-atlas = ExtResource("4_blswb")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vkqfg"]
-atlas = ExtResource("4_blswb")
-region = Rect2(192, 0, 192, 192)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsc1k"]
-atlas = ExtResource("4_blswb")
-region = Rect2(384, 0, 192, 192)
+atlas = ExtResource("3_iwm72")
+region = Rect2(0, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cfce6"]
-atlas = ExtResource("4_blswb")
-region = Rect2(576, 0, 192, 192)
+atlas = ExtResource("3_iwm72")
+region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b1tl3"]
-atlas = ExtResource("4_blswb")
-region = Rect2(768, 0, 192, 192)
+atlas = ExtResource("3_iwm72")
+region = Rect2(384, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ia8cj"]
-atlas = ExtResource("4_blswb")
+atlas = ExtResource("3_iwm72")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15ync"]
+atlas = ExtResource("3_iwm72")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckxih"]
+atlas = ExtResource("3_iwm72")
 region = Rect2(960, 0, 192, 192)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ckxih"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_obhoj"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_332gm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vkqfg")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rsc1k")
 }, {
@@ -109,32 +52,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ia8cj")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_cfce6"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_332gm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vkqfg")
+"texture": SubResource("AtlasTexture_15ync")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rsc1k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cfce6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b1tl3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ia8cj")
+"texture": SubResource("AtlasTexture_ckxih")
 }],
 "loop": true,
 "name": &"default",
@@ -1021,54 +944,55 @@ sources/0 = SubResource("TileSetAtlasSource_m58ig")
 [node name="Character" parent="." instance=ExtResource("4_1eo50")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(37, 161)
+position = Vector2(90, 157)
 scale = Vector2(0.5, 0.5)
 
 [node name="Npcs" parent="." instance=ExtResource("2_blswb")]
 position = Vector2(150, 143)
 scale = Vector2(0.44, 0.44)
-sprite_frames = SubResource("SpriteFrames_15ync")
-name_npc = "Utah"
-next_npc = "Hamp"
+sprite_frames = SubResource("SpriteFrames_obhoj")
 
 [node name="Archer-1" parent="." instance=ExtResource("2_blswb")]
 z_index = 1
 position = Vector2(7, 66)
 scale = Vector2(0.44, 0.44)
-sprite_frames = SubResource("SpriteFrames_ckxih")
 
 [node name="Archer-2" parent="." instance=ExtResource("2_blswb")]
 z_index = 1
 position = Vector2(-82, 67)
 scale = Vector2(0.44, 0.44)
-sprite_frames = SubResource("SpriteFrames_ckxih")
 
 [node name="Archer-3" parent="." instance=ExtResource("2_blswb")]
 z_index = 1
 position = Vector2(-38, 34)
 scale = Vector2(0.44, 0.44)
-sprite_frames = SubResource("SpriteFrames_ckxih")
 
 [node name="Archer-4" parent="." instance=ExtResource("2_blswb")]
 z_index = 1
 position = Vector2(-62, 31)
 scale = Vector2(0.44, 0.44)
-sprite_frames = SubResource("SpriteFrames_ckxih")
 
 [node name="Archer-5" parent="." instance=ExtResource("2_blswb")]
 z_index = 1
 position = Vector2(-12, 30)
 scale = Vector2(0.44, 0.44)
-sprite_frames = SubResource("SpriteFrames_ckxih")
 
 [node name="Archer-6" parent="." instance=ExtResource("2_blswb")]
 z_index = 1
 position = Vector2(218, 163)
 scale = Vector2(0.44, 0.44)
-sprite_frames = SubResource("SpriteFrames_cfce6")
 
 [node name="Warming" parent="." instance=ExtResource("6_0rbo8")]
-position = Vector2(8, 112)
+position = Vector2(-34, 57)
+dialog = Array[String](["Castelo", "Era de Servolo"])
+
+[node name="Warming2" parent="." instance=ExtResource("6_0rbo8")]
+position = Vector2(-82, 99)
+dialog = Array[String](["Torres", "Eram pra proteger Ser..."])
+
+[node name="Warming3" parent="." instance=ExtResource("6_0rbo8")]
+position = Vector2(81, 32)
+dialog = Array[String](["Casa", "E uma casa"])
 
 [node name="Trees-1" parent="." instance=ExtResource("7_1eo50")]
 position = Vector2(32, 180)

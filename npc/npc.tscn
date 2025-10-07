@@ -27,6 +27,7 @@ shadow_size = 3
 script = ExtResource("1_66myh")
 labelKeyboard = NodePath("Npc/Area2D/LabelKeyboard")
 mural_npc = NodePath("Npc/Area2D/CanvasLayer/Mural")
+name_npc = "Utah"
 title_mural = NodePath("Npc/Area2D/CanvasLayer/Mural/Title")
 text_mural = NodePath("Npc/Area2D/CanvasLayer/Mural/Text")
 
@@ -52,6 +53,7 @@ position = Vector2(225, 25)
 [node name="CanvasLayer" type="CanvasLayer" parent="Npc/Area2D"]
 
 [node name="Mural" type="PanelContainer" parent="Npc/Area2D/CanvasLayer"]
+visible = false
 offset_right = 77.0
 offset_bottom = 43.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nhy3c")

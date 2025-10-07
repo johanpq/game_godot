@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://nanf2cwywhgx"]
+[gd_scene load_steps=8 format=3 uid="uid://nanf2cwywhgx"]
 
 [ext_resource type="Texture2D" uid="uid://c7j1l5tdf087q" path="res://Tiny Swords (Free Pack)/Decorations/summer and spring items.png" id="1_fdk8n"]
 [ext_resource type="Script" uid="uid://c6o03q3buolpc" path="res://warming/script/warming.gd" id="1_vetjd"]
+[ext_resource type="PackedScene" uid="uid://5ypvcel7aw54" path="res://KeyboardLabel/Label_keyboard.tscn" id="3_niau1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vetjd"]
 texture = ExtResource("1_fdk8n")
@@ -159,29 +160,63 @@ texture = ExtResource("1_fdk8n")
 [sub_resource type="TileSet" id="TileSet_niau1"]
 sources/0 = SubResource("TileSetAtlasSource_vetjd")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vetjd"]
-size = Vector2(6, 5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61lah"]
-size = Vector2(6, 5)
+size = Vector2(12, 12)
 
-[node name="Warming" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vetjd"]
+content_margin_left = 2.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.941165, 0.955695, 0.996583, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 3
+
+[node name="Warming" type="Node2D" node_paths=PackedStringArray("painel", "title", "text")]
 script = ExtResource("1_vetjd")
+painel = NodePath("Area2D/CanvasLayer/Mural")
+title = NodePath("Area2D/CanvasLayer/Mural/Title")
+text = NodePath("Area2D/CanvasLayer/Mural/Text")
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Area2D"]
+[node name="TileMapLayer" type="TileMapLayer" parent="Area2D"]
 position = Vector2(113, 28)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="Area2D/StaticBody2D"]
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 0, 0, 2, 0, 12, 0, 0, 0)
 tile_set = SubResource("TileSet_niau1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D"]
-position = Vector2(12, 10.5)
-shape = SubResource("RectangleShape2D_vetjd")
+[node name="LabelKeyboard" parent="Area2D" instance=ExtResource("3_niau1")]
+position = Vector2(109, 34)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(125, 38.5)
+position = Vector2(125, 39)
 shape = SubResource("RectangleShape2D_61lah")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D"]
+
+[node name="Mural" type="PanelContainer" parent="Area2D/CanvasLayer"]
+visible = false
+offset_right = 77.0
+offset_bottom = 43.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vetjd")
+
+[node name="Title" type="RichTextLabel" parent="Area2D/CanvasLayer/Mural"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 7
+
+[node name="Text" type="RichTextLabel" parent="Area2D/CanvasLayer/Mural"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 5
+text = "default"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="in_area"]
+[connection signal="body_exited" from="Area2D" to="." method="out_area"]
