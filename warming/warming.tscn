@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://nanf2cwywhgx"]
+[gd_scene load_steps=9 format=3 uid="uid://nanf2cwywhgx"]
 
 [ext_resource type="Texture2D" uid="uid://c7j1l5tdf087q" path="res://Tiny Swords (Free Pack)/Decorations/summer and spring items.png" id="1_fdk8n"]
 [ext_resource type="Script" uid="uid://c6o03q3buolpc" path="res://warming/script/warming.gd" id="1_vetjd"]
 [ext_resource type="PackedScene" uid="uid://5ypvcel7aw54" path="res://KeyboardLabel/Label_keyboard.tscn" id="3_niau1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_niau1"]
+size = Vector2(6, 2)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vetjd"]
 texture = ExtResource("1_fdk8n")
@@ -183,6 +186,14 @@ script = ExtResource("1_vetjd")
 painel = NodePath("Area2D/CanvasLayer/Mural")
 title = NodePath("Area2D/CanvasLayer/Mural/Title")
 text = NodePath("Area2D/CanvasLayer/Mural/Text")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(125, 42)
+shape = SubResource("RectangleShape2D_niau1")
 
 [node name="Area2D" type="Area2D" parent="."]
 

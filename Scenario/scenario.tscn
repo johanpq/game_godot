@@ -942,45 +942,13 @@ sources/0 = SubResource("TileSetAtlasSource_m58ig")
 [node name="Water" parent="." instance=ExtResource("1_iwm72")]
 
 [node name="Character" parent="." instance=ExtResource("4_1eo50")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(90, 157)
+position = Vector2(228, 161)
 scale = Vector2(0.5, 0.5)
 
 [node name="Npcs" parent="." instance=ExtResource("2_blswb")]
 position = Vector2(150, 143)
 scale = Vector2(0.44, 0.44)
 sprite_frames = SubResource("SpriteFrames_obhoj")
-
-[node name="Archer-1" parent="." instance=ExtResource("2_blswb")]
-z_index = 1
-position = Vector2(7, 66)
-scale = Vector2(0.44, 0.44)
-
-[node name="Archer-2" parent="." instance=ExtResource("2_blswb")]
-z_index = 1
-position = Vector2(-82, 67)
-scale = Vector2(0.44, 0.44)
-
-[node name="Archer-3" parent="." instance=ExtResource("2_blswb")]
-z_index = 1
-position = Vector2(-38, 34)
-scale = Vector2(0.44, 0.44)
-
-[node name="Archer-4" parent="." instance=ExtResource("2_blswb")]
-z_index = 1
-position = Vector2(-62, 31)
-scale = Vector2(0.44, 0.44)
-
-[node name="Archer-5" parent="." instance=ExtResource("2_blswb")]
-z_index = 1
-position = Vector2(-12, 30)
-scale = Vector2(0.44, 0.44)
-
-[node name="Archer-6" parent="." instance=ExtResource("2_blswb")]
-z_index = 1
-position = Vector2(218, 163)
-scale = Vector2(0.44, 0.44)
 
 [node name="Warming" parent="." instance=ExtResource("6_0rbo8")]
 position = Vector2(-34, 57)
