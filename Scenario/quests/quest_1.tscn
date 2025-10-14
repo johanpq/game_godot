@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://im85oumulcu1"]
+
+[ext_resource type="Script" uid="uid://c7iowq8ulfktn" path="res://Scenario/quests/scripts/quest_1.gd" id="1_21twp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3b1x2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3b1x2"]
+size = Vector2(32, 20)
+
+[node name="Quest1" type="Node2D"]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_21twp")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-5, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(6.79329, 0.14483)
+rotation = 3.14159
+scale = Vector2(32.8631, -19.8282)
+texture = SubResource("CanvasTexture_3b1x2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7, 0)
+shape = SubResource("RectangleShape2D_3b1x2")
+debug_color = Color(0.878431, 0.819608, 0, 0.419608)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

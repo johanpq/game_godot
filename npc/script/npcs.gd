@@ -25,6 +25,7 @@ var is_typing := false
 @export var next_npc: String
 @export var title_mural: RichTextLabel
 @export var text_mural: RichTextLabel
+@export var next_scenario: String
 
 var player_in_area = false
 var dialogue_index: int = 0
@@ -134,6 +135,9 @@ func out_area(_body: Node2D) -> void:
 	close_label_keyboard()
 	_close_dialogue()
 
+func next_level():
+	get_tree().change_scene_to_file("res://Scenario/" + next_scenario + ".tscn")
+
 func _process(_delta: float) -> void:
 	if is_typing:
 		typing_timer += _delta
@@ -147,3 +151,6 @@ func _process(_delta: float) -> void:
 
 	if player_in_area and Input.is_action_just_pressed("mural_quests"):
 		toggle_dialogue()
+		
+	if player_in_area and Input.is_action_just_pressed("next_level"):
+		next_level()

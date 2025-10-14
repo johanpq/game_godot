@@ -1,9 +1,10 @@
-[gd_scene load_steps=35 format=4 uid="uid://bfl0bwcxhfrci"]
+[gd_scene load_steps=44 format=4 uid="uid://bfl0bwcxhfrci"]
 
 [ext_resource type="PackedScene" uid="uid://d0825uxp8afud" path="res://TitleMapLayer/tile_map_layer.tscn" id="1_iwm72"]
 [ext_resource type="PackedScene" uid="uid://k00yvrjm63ux" path="res://npc/npc.tscn" id="2_blswb"]
 [ext_resource type="Texture2D" uid="uid://vh5fwiofp517" path="res://Tiny Swords (Free Pack)/Units/Black Units/Monk/Idle.png" id="3_iwm72"]
 [ext_resource type="PackedScene" uid="uid://c5xviqa6tjxo8" path="res://character/character.tscn" id="4_1eo50"]
+[ext_resource type="Texture2D" uid="uid://bjlk788pfdk36" path="res://Tiny Swords (Free Pack)/Units/Yellow Units/Monk/Idle.png" id="5_cfce6"]
 [ext_resource type="PackedScene" uid="uid://nanf2cwywhgx" path="res://warming/warming.tscn" id="6_0rbo8"]
 [ext_resource type="PackedScene" uid="uid://cydtjy474h63f" path="res://trees/trees_1.tscn" id="7_1eo50"]
 [ext_resource type="Texture2D" uid="uid://cpmchlb8l5als" path="res://Tiny Swords (Free Pack)/Buildings/Red Buildings/House2.png" id="8_e38fm"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://brj7byhfqyn2f" path="res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="12_15ync"]
 [ext_resource type="Texture2D" uid="uid://dossqhwwkr280" path="res://Tiny Swords (Free Pack)/Buildings/Black Buildings/Tower.png" id="13_ckxih"]
 [ext_resource type="Texture2D" uid="uid://7kpwntj778pc" path="res://Tiny Swords (Free Pack)/Buildings/Red Buildings/Tower.png" id="14_obhoj"]
+[ext_resource type="PackedScene" uid="uid://im85oumulcu1" path="res://Scenario/quests/quest_1.tscn" id="15_b1tl3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsc1k"]
 atlas = ExtResource("3_iwm72")
@@ -58,6 +60,56 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ckxih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obhoj"]
+atlas = ExtResource("5_cfce6")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3pbu"]
+atlas = ExtResource("5_cfce6")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a3ta"]
+atlas = ExtResource("5_cfce6")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x12u1"]
+atlas = ExtResource("5_cfce6")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73wn7"]
+atlas = ExtResource("5_cfce6")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37diw"]
+atlas = ExtResource("5_cfce6")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vr4ks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obhoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3pbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a3ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x12u1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73wn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37diw")
 }],
 "loop": true,
 "name": &"default",
@@ -941,14 +993,31 @@ sources/0 = SubResource("TileSetAtlasSource_m58ig")
 
 [node name="Water" parent="." instance=ExtResource("1_iwm72")]
 
+[node name="Quest1-1" parent="." instance=ExtResource("15_b1tl3")]
+position = Vector2(66, 145)
+
+[node name="Quest1-2" parent="." instance=ExtResource("15_b1tl3")]
+position = Vector2(66, 108)
+
 [node name="Character" parent="." instance=ExtResource("4_1eo50")]
-position = Vector2(228, 161)
+position = Vector2(71, 172)
 scale = Vector2(0.5, 0.5)
 
 [node name="Npcs" parent="." instance=ExtResource("2_blswb")]
 position = Vector2(150, 143)
 scale = Vector2(0.44, 0.44)
+dialogues = Array[String](["Exploque o mapa!", "Procure as marcacoes brancas!"])
 sprite_frames = SubResource("SpriteFrames_obhoj")
+next_npc = "Telp"
+
+[node name="Npcs2" parent="." instance=ExtResource("2_blswb")]
+position = Vector2(321, 183)
+scale = Vector2(0.44, 0.44)
+dialogues = Array[String](["Deseja ir para a proxima fase?", "Clique em enter"])
+sprite_frames = SubResource("SpriteFrames_vr4ks")
+name_npc = "Telp"
+required_npc = "Utah"
+next_scenario = "level1"
 
 [node name="Warming" parent="." instance=ExtResource("6_0rbo8")]
 position = Vector2(-34, 57)
