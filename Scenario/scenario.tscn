@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://brj7byhfqyn2f" path="res://Tiny Swords (Free Pack)/Buildings/Blue Buildings/House1.png" id="12_15ync"]
 [ext_resource type="Texture2D" uid="uid://dossqhwwkr280" path="res://Tiny Swords (Free Pack)/Buildings/Black Buildings/Tower.png" id="13_ckxih"]
 [ext_resource type="Texture2D" uid="uid://7kpwntj778pc" path="res://Tiny Swords (Free Pack)/Buildings/Red Buildings/Tower.png" id="14_obhoj"]
-[ext_resource type="PackedScene" uid="uid://im85oumulcu1" path="res://Scenario/quests/quest_1.tscn" id="15_b1tl3"]
+[ext_resource type="PackedScene" uid="uid://cicvfpmq5ime2" path="res://trash/trash.tscn" id="15_b1tl3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rsc1k"]
 atlas = ExtResource("3_iwm72")
@@ -993,12 +993,6 @@ sources/0 = SubResource("TileSetAtlasSource_m58ig")
 
 [node name="Water" parent="." instance=ExtResource("1_iwm72")]
 
-[node name="Quest1-1" parent="." instance=ExtResource("15_b1tl3")]
-position = Vector2(66, 145)
-
-[node name="Quest1-2" parent="." instance=ExtResource("15_b1tl3")]
-position = Vector2(66, 108)
-
 [node name="Character" parent="." instance=ExtResource("4_1eo50")]
 position = Vector2(71, 172)
 scale = Vector2(0.5, 0.5)
@@ -1006,7 +1000,7 @@ scale = Vector2(0.5, 0.5)
 [node name="Npcs" parent="." instance=ExtResource("2_blswb")]
 position = Vector2(150, 143)
 scale = Vector2(0.44, 0.44)
-dialogues = Array[String](["Exploque o mapa!", "Procure as marcacoes brancas!"])
+dialogues = Array[String](["Temos lixos em volta", "Explore a area e remova os lixos"])
 sprite_frames = SubResource("SpriteFrames_obhoj")
 next_npc = "Telp"
 
@@ -1116,3 +1110,6 @@ position = Vector2(-58, 53)
 scale = Vector2(0.25, 0.25)
 tile_map_data = PackedByteArray("AABbAB8AAAAAAAQAAABbACAAAAAAAAUAAABbACEAAAAAAAYAAABbACIAAAAAAAcAAABbACMAAAAAAAgAAABbACYAAAAAAAsAAABbACcAAAAAAAwAAABcAB4AAAABAAMAAABcAB8AAAABAAQAAABcACAAAAABAAUAAABcACEAAAABAAYAAABcACIAAAABAAcAAABcACMAAAABAAgAAABcACQAAAABAAkAAABcACUAAAABAAoAAABcACYAAAABAAsAAABcACcAAAABAAwAAABcACgAAAABAA0AAABdAB4AAAACAAMAAABdAB8AAAACAAQAAABdACAAAAACAAUAAABdACEAAAACAAYAAABdACIAAAACAAcAAABdACMAAAACAAgAAABdACQAAAACAAkAAABdACUAAAACAAoAAABdACYAAAACAAsAAABdACcAAAACAAwAAABdACgAAAACAA0AAABeAB0AAAADAAIAAABeAB4AAAADAAMAAABeAB8AAAADAAQAAABeACAAAAADAAUAAABeACEAAAADAAYAAABeACIAAAADAAcAAABeACMAAAADAAgAAABeACQAAAADAAkAAABeACUAAAADAAoAAABeACYAAAADAAsAAABeACcAAAADAAwAAABeACgAAAADAA0AAABfAB0AAAAEAAIAAABfAB4AAAAEAAMAAABfAB8AAAAEAAQAAABfACAAAAAEAAUAAABfACEAAAAEAAYAAABfACIAAAAEAAcAAABfACMAAAAEAAgAAABfACQAAAAEAAkAAABfACUAAAAEAAoAAABfACYAAAAEAAsAAABfACcAAAAEAAwAAABfACgAAAAEAA0AAABgAB4AAAAFAAMAAABgAB8AAAAFAAQAAABgACAAAAAFAAUAAABgACEAAAAFAAYAAABgACIAAAAFAAcAAABgACMAAAAFAAgAAABgACQAAAAFAAkAAABgACUAAAAFAAoAAABgACYAAAAFAAsAAABgACcAAAAFAAwAAABgACgAAAAFAA0AAABhAB4AAAAGAAMAAABhAB8AAAAGAAQAAABhACAAAAAGAAUAAABhACEAAAAGAAYAAABhACIAAAAGAAcAAABhACMAAAAGAAgAAABhACQAAAAGAAkAAABhACUAAAAGAAoAAABhACYAAAAGAAsAAABhACcAAAAGAAwAAABhACgAAAAGAA0AAABiAB8AAAAHAAQAAABiACAAAAAHAAUAAABiACEAAAAHAAYAAABiACIAAAAHAAcAAABiACMAAAAHAAgAAABiACYAAAAHAAsAAABiACcAAAAHAAwAAAA=")
 tile_set = SubResource("TileSet_c58qd")
+
+[node name="Items" parent="." instance=ExtResource("15_b1tl3")]
+position = Vector2(73, 107)

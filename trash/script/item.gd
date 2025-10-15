@@ -11,3 +11,5 @@ func removeItem():
 	get_tree().call_group("level", "on_item_removed")
 	# Depois remove o item
 	queue_free()
+	
+	GlobalVariables.quest_completed.append("Utah")
